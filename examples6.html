@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+	  <title>Examples 6</title>
+	  <meta charset="UTF-8">
+	  <link type="text/css" rel="stylesheet" href="examples.css">
+	  <style>
+		  
+		  header.pageheader, h3 {
+			color: navy;
+			font-family: cursive;
+			text-align: center;
+			  }
+		  
+		  /*pagination*/
+		
+		ul.pagination {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			}
+			
+		ul.pagination li {
+			display: inline;
+			}
+			
+		ul.pagination li a{
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+			transition: background-color .5;
+			border: 1px solid #ddd;
+			}
+			
+		ul.pagination li a.active {
+			background-color: #4286f4;
+			color: white;
+			border: 1px solid #4caf50;
+			}
+			
+		ul.pagination li a:hover:not(active) {
+			background-color: #ddd;
+			}
+			
+		div.centerpag {
+			text-align: center;
+			}
+			
+			/*style examples*/
+		  
+		  /*Layout using Floats*/
+	  
+	  div.container1 {
+		  width: 100%;
+		  border: 2px solid #4f4f4f;
+		  }
+		  
+	  div.container1 header, div.container1 footer {
+		  padding: 1em;
+		  color: white;
+		  background-color: black;
+		  clear: left; /*nothing allowed on the left*/
+		  text-align: center;
+		  }
+		  
+		div.container1 nav {
+			float: left;
+			max-width: 160px;
+			margin: 0;
+			padding: 1em;
+			}
+			
+		div.container1 nav ul li {
+			list-style-type: none;
+			padding: 0;
+			}
+			
+		div.container1 nav ul a {
+			text-decoration: none;
+			color: #4f4f4f;
+			}
+			
+		div.container1 article {
+			margin-left: 170px;
+			border-left: 1px solid grey;
+			padding: 1em;
+			overflow: hidden;
+			}
+			
+		div.clearfix {
+			clear: both;
+			}
+			
+			/*Layout using Flexbox*/
+			
+		div.flex-container {
+			display: flex;
+			flex-flow: row wrap;/*forward row...wrap if necessary*/
+			text-align: center;
+			}
+			
+		div.flex-container > * {
+			padding: 15px;
+			flex: 1 100%; /*items are same length (100%) regardless of content*/
+			}
+			
+		div.flex-container article {
+			text-align: left;
+			}
+			
+		div.flex-container header {
+			background: black; color: white;
+			}
+			
+		div.flex-container footer {
+			background: #aaa; color: white;
+			}
+			
+		div.flex-container nav {background: #eee;}
+		
+		div.flex-container nav ul {
+			list-style-type: none;
+			padding: 0;
+			}			
+			
+		div.flex-container nav ul a {
+			text-decoration: none;
+			}
+			
+		@media all and (min-width: 800px) {
+			div.flex-container nav {
+				text-align: left; flex: 1 auto; order: 1;
+				}
+			div.flex-container article {
+				flex: 5 0px; order: 2;
+				}
+			div.flex-container footer {
+				order: 3;
+				}
+			}
+		
+			 </style>
+	  
+	</head>
+	
+	<body>
+		<header class="pageheader">
+	<h1>HTML Layouts</h1>
+		</header>
+	
+	<div class="centerpag">
+		  <ul class="pagination">
+			<li><a href="examples5.html">«</a></li>
+		    <li><a href="examples1.html">1</a></li>
+		    <li><a href="examples2.html">2</a></li>
+		    <li><a href="examples3.html">3</a></li>
+		    <li><a href="examples4.html">4</a></li>
+		    <li><a href="examples5.html">5</a></li>
+		    <li><a href="#" class="active">6</a></li>
+		    <li><a href="examples7.html">7</a></li>
+		    <li><a href="examples8.html">8</a></li>
+		    <li><a href="examples9.html">9</a></li>
+		    <li><a href="examples10.html">10</a></li>
+		    <li><a href="examples11.html">11</a></li>
+		    <li><a href="examples12.html">12</a></li>
+		    <li><a href="examples13.html">13</a></li>
+		    <li><a href="examples14.html">14</a></li>
+		    <li><a href="examples15.html">15</a></li>
+		    <li><a href="examples7.html">»</a></li>
+		  </ul>
+		</div>
+	
+	<h3>Layout using CSS Floats</h3>
+	
+	<div class="container1">
+	  <header>
+	    <h1>Gallery</h1>
+	  </header>
+	  
+	  <nav>
+	    <ul>
+	      <li><a href="#">Mountains</a></li>
+	      <li><a href="#">Parks</a></li>
+	      <li><a href="#">Hotels</a></li>
+	    </ul>
+	  </nav>
+	  
+	  <article>
+	    <h1>Colorado</h1>
+	    <p><blockquote>Colorado is a state in the United States encompassing most of the Southern Rocky Mountains as well as the northeastern portion of the Colorado Plateau and the western edge of the Great Plains.</blockquote></p>
+	    
+	    <p><blockquote>Colorado is the 8th most extensive and the 22nd most populous of the 50 United States.</blockquote></p>
+	  </article>
+	  
+	  <footer>Copyright &copy superjoefly</footer>
+	  
+	  </div>
+	  
+	  <div class="clearfix"></div>
+	  
+	  <hr>
+	  
+	  <h3>Layout Using CSS Flexbox</h3>
+	  
+	  <div class="flex-container">
+	    <header>
+	      <h1>Flex Gallery</h1>
+	    </header>
+	    
+	    <nav class="nav">
+	      <ul>
+	        <li><a href="#">Art</a></li>
+	        <li><a href="#">Science</a></li>
+	        <li><a href="#">Photography</a></li>
+	      </ul>
+	    </nav>
+	    
+	    <article class="article">
+	      <h1>Science</h1>
+	      
+	      <p><blockquote>Science is a systematic enterprise that builds and organizes knowledge in the form of testable explanations and predictions about the universe.</blockquote></p>
+	      
+	      <p><blockquote>Contemporary science is typically subdivided into the natural sciences, which study the material universe; the social sciences, which study people and societies; and the formal sciences, which study logic and mathematics. The formal sciences are often excluded as they do not depend on empirical observations.[3] Disciplines which use science, like engineering and medicine, may also be considered to be applied sciences.</blockquote></p>
+	      
+	      <p><strong>Resize the page to see what happens!</strong></p>
+	    </article>
+	    
+	    <footer>Copyright &copy superjoefly</footer>
+	  </div>
+	  
+	  <p><strong>Note: use of W3.CSS Framework for layout on next page...</strong></p>
+	
+<nav class="nava">
+	<ul>
+	<li><a href="../../../index.html">Home</a></li>
+	<li><a href="../../photography/photography.html">Photography</a></li>
+	<li><a href="../../resume/resume.html">Resume</a></li>
+	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+	<li><a class="active" href="../projects.html">Projects</a></li>
+	<li style="float: right"><a href="../../about/about.html">About</a></li>
+	</a></li>
+	</ul>
+	</nav>
+	
+	</body>
+
+</html>

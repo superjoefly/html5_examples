@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+	  <title>Examples 13</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link type="text/css" rel="stylesheet" href="examples.css">
+	  <style>
+	  
+	  * {
+		  box-sizing: border-box;
+		  }
+		  
+		  header{
+			color: navy;
+			font-family: cursive;
+			text-align: center;
+			}  
+			
+		h1, h2, h3 {
+			color: navy;
+			font-family: cursive;
+			}
+		  
+		  /*pagination*/
+		
+		ul.pagination {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			}
+			
+		ul.pagination li {
+			display: inline;
+			}
+			
+		ul.pagination li a{
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+			transition: background-color .5;
+			border: 1px solid #ddd;
+			}
+			
+		ul.pagination li a.active {
+			background-color: #4286f4;
+			color: white;
+			border: 1px solid #4caf50;
+			}
+			
+		ul.pagination li a:hover:not(active) {
+			background-color: #ddd;
+			}
+			
+		div.centerpag {
+			text-align: center;
+			}
+			
+			/*style examples*/
+	  
+	  </style>
+	  
+	</head>
+	
+	<body>
+		
+	  <header>
+	    <h1>HTML5 Media</h1>
+	  </header>
+	  
+	  <div class="centerpag">
+		  <ul class="pagination">
+			<li><a href="examples12.html">«</a></li>
+		    <li><a href="examples1.html">1</a></li>
+		    <li><a href="examples2.html">2</a></li>
+		    <li><a href="examples3.html">3</a></li>
+		    <li><a href="examples4.html">4</a></li>
+		    <li><a href="examples5.html">5</a></li>
+		    <li><a href="examples6.html">6</a></li>
+		    <li><a href="examples7.html">7</a></li>
+		    <li><a href="examples8.html">8</a></li>
+		    <li><a href="examples9.html">9</a></li>
+		    <li><a href="examples10.html">10</a></li>
+		    <li><a href="examples11.html">11</a></li>
+		    <li><a href="examples12.html">12</a></li>
+		    <li><a href="#" class="active">13</a></li>
+		    <li><a href="examples14.html">14</a></li>
+		    <li><a href="examples15.html">15</a></li>
+		    <li><a href="examples14.html">»</a></li>
+		  </ul>
+		</div>
+	
+	  <h1>Video and Audio</h1>
+	  
+	  <h3>Audio (with autoplay)</h3>
+	  
+	  <audio controls autoplay>
+	    <source src="audio/song.mp3" type="audio/mp3">
+	    Your browser does not support the audio element.
+	  </audio>
+	  
+	  <hr>
+	  
+	  <h3>Video</h3>
+	  
+	  <video width="400px" controls poster="video/bbb.png">
+	    <source src="video/bbb.mp4" type="video/mp4">
+	    Your browser does not support HTML5 video.
+	  </video>
+	  
+	  <p>Video courtesy of Big Buck Bunny</p>
+	  
+	  <hr>
+	  
+	  <h3>Video Layout Using JavaScript</h3>
+	  
+	  <div style="text-align: center">
+	    <button onclick="playPause()">Play/Pause</button>
+	    
+	    <button onclick="makeBig()">Big</button>
+	    
+	    <button onclick="makeSmall()">Small</button>
+	    
+	    <button onclick="makeNormal()">Normal</button>
+	    <br><br>
+	    
+	    <video id="video1" width="400px" poster="video/bbb.png">
+	      <source src="video/bbb.mp4" type="video/mp4">
+	      Your browser does not support HTML5 video.
+	    </video>
+	  </div>
+	  
+	  <script>
+	    var myVideo = document.getElementById("video1");
+	    
+	    function playPause() {
+			if (myVideo.paused)
+			myVideo.play();
+			else
+				myVideo.pause();
+			}
+			
+		function makeBig() {
+			myVideo.width = 600;
+			}
+			
+		function makeSmall() {
+			myVideo.width = 300;
+			}
+			
+		function makeNormal() {
+			myVideo.width = 400;
+			}
+	  </script>
+	  
+	  <hr>
+	  
+	  <h3>Youtube Video (with autoplay)</h3>
+	  
+	  <p>The following Youtube video is placed in an <b>iframe</b> and has <b>autoplay enabled</b>:</p>
+	  
+	  <iframe width="400" height="400" src="https://www.youtube.com/embed/9R8dEZs3_6Q?autoplay=1"></iframe>
+	  
+
+<nav class="nava">
+	<ul>
+	<li><a href="../../../index.html">Home</a></li>
+	<li><a href="../../photography/photography.html">Photography</a></li>
+	<li><a href="../../resume/resume.html">Resume</a></li>
+	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+	<li><a class="active" href="../projects.html">Projects</a></li>
+	<li style="float: right"><a href="../../about/about.html">About</a></li>
+	</a></li>
+	</ul>
+	</nav>
+	  </body>
+
+</html>

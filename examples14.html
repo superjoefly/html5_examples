@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+	  <title>Examples 14</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link type="text/css" rel="stylesheet" href="examples.css">
+	  <style>
+	   header{
+			color: navy;
+			font-family: cursive;
+			text-align: center;
+			}  
+			
+		h1, h2, h3 {
+			color: navy;
+			font-family: cursive;
+			}
+		  
+		  /*pagination*/
+		
+		ul.pagination {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			}
+			
+		ul.pagination li {
+			display: inline;
+			}
+			
+		ul.pagination li a{
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+			transition: background-color .5;
+			border: 1px solid #ddd;
+			}
+			
+		ul.pagination li a.active {
+			background-color: #4286f4;
+			color: white;
+			border: 1px solid #4caf50;
+			}
+			
+		ul.pagination li a:hover:not(active) {
+			background-color: #ddd;
+			}
+			
+		div.centerpag {
+			text-align: center;
+			}
+			
+			/*style examples*/
+		  
+	  * {
+		  box-sizing: border-box;
+		  }
+		  
+	  #div1 {
+		width: 200px;
+		height: 200px;
+		padding: 20px;
+		border: 2px solid grey;
+		}
+		
+	#div2, #div3 {
+		float: left;
+		width: 200px;
+		height: 200px;
+		margin: 10px;
+		padding: 20px;
+		border: 2px solid grey;
+		}
+		  
+	  </style>
+	  
+	</head>
+	
+	<body>
+	
+	<header>
+	  <h1>HTML APIs</h1>
+	</header>
+	
+	<div class="centerpag">
+		  <ul class="pagination">
+			<li><a href="examples13.html">«</a></li>
+		    <li><a href="examples1.html">1</a></li>
+		    <li><a href="examples2.html">2</a></li>
+		    <li><a href="examples3.html">3</a></li>
+		    <li><a href="examples4.html">4</a></li>
+		    <li><a href="examples5.html">5</a></li>
+		    <li><a href="examples6.html">6</a></li>
+		    <li><a href="examples7.html">7</a></li>
+		    <li><a href="examples8.html">8</a></li>
+		    <li><a href="examples9.html">9</a></li>
+		    <li><a href="examples10.html">10</a></li>
+		    <li><a href="examples11.html">11</a></li>
+		    <li><a href="examples12.html">12</a></li>
+		    <li><a href="examples13.html">13</a></li>
+		    <li><a href="#" class="active">14</a></li>
+		    <li><a href="examples15.html">15</a></li>
+		    <li><a href="examples15.html">»</a></li>
+		  </ul>
+		</div>
+	
+	<h1>HTML Geolocation</h1>
+	
+	<h3>Using HTML Geolocation</h3>
+	
+	<p>The <b>getCurrentPosition()</b> Method...includes error function and map display.</p>
+	
+	
+	<p id="demo">Click the button to get your position:</p>
+	
+	<button onclick="getLocation()">Click Me!</button>
+	
+	<div id="mapholder"></div>
+	
+	<script>
+	  var x = document.getElementById("demo");
+	  
+	  function getLocation() {
+		  if (navigator.geolocation) {
+			  navigator.geolocation.getCurrentPosition(showPosition);
+			  }
+		  else {
+			  x.innerHTML = "Geolocation is not supported by this browser.";
+			  }
+		  }
+		  
+	  function showPosition(position) {
+		  x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+		  
+		  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    
+          +latlon+"&zoom=14&size=400x300&sensor=false";
+    
+          document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+		  }
+		  
+	  function showError(error) {
+		  switch(error.code) {
+			case error.PERMISSION_DENIED:
+			  x.innerHTML = "User denied the request for Geolocation."
+			  break;
+			case error.POSITION_UNAVAILABLE:
+			  x.innerHTML = "Location information is unavailable."
+			  break;
+			case error.TIMEOUT:
+			  x.innerHTML = "The request to get the user location timed out."
+			  break;
+			case error.UNKNOWN_ERROR:
+			  x.innerHTML = "An unknown error occurred."
+			  break;
+			  }
+		  }
+		  
+	</script>
+	
+	
+	
+	<p><b>Note:</b> the above example runs an error function (function showError(error)) if it fails to get the user's location.</p>
+	
+	<p><b>Note:</b> the above example will display the result in a map using Google Maps.</p>
+	
+	<hr>
+	
+	<h1>HTML5 Drag and Drop</h1>
+	
+	<p>Simple <b>drag and drop</b> example:</p>
+	
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<img id="drag1" src="sun.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+	
+	<script>
+	  function allowDrop(ev) {
+		  ev.preventDefault();
+		  }
+		  
+	  function drag(ev) {
+		  ev.dataTransfer.setData("text", ev.target.id);
+		  }
+		  
+	  function drop(ev) {
+		  ev.preventDefault();
+		  var data = ev.dataTransfer.getData("text");
+		  ev.target.appendChild(document.getElementById(data));
+		  }
+	</script>
+	
+	<hr>
+	
+	<p>Drag image <b>back and forth</b>:</p>
+	
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  <img src="orangestar.png" draggable="true" ondragstart="drag(event)" id="drag2" width="150" height="150">
+	</div>
+	
+	<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	
+	<script>
+	  function allowDrop(ev) {
+		  ev.preventDefault();
+		  }
+		  
+	  function drag(ev) {
+		  ev.dataTransfer.setData("text", ev.target.id);
+		  }
+		  
+	  function drop(ev) {
+		  ev.preventDefault():
+		  var data = ev.dataTransfer.getData("text");
+		  
+		  ev.target.appendChild(document.getElementById(data));
+		  }
+	</script>
+	
+<nav class="nava">
+	<ul>
+	<li><a href="../../../index.html">Home</a></li>
+	<li><a href="../../photography/photography.html">Photography</a></li>
+	<li><a href="../../resume/resume.html">Resume</a></li>
+	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+	<li><a class="active" href="../projects.html">Projects</a></li>
+	<li style="float: right"><a href="../../about/about.html">About</a></li>
+	</a></li>
+	</ul>
+	</nav>
+	
+	
+	</body>
+
+</html>

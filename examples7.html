@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<title>Examples 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="examples.css">
+
+<style>
+	
+	header.pageheader {
+		    color: navy;
+			font-family: cursive;
+			text-align: center;
+		}
+	/*pagination*/
+		
+		ul.pagination {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			}
+			
+		ul.pagination li {
+			display: inline;
+			}
+			
+		ul.pagination li a{
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+			transition: background-color .5;
+			border: 1px solid #ddd;
+			}
+			
+		ul.pagination li a.active {
+			background-color: #4286f4;
+			color: white;
+			border: 1px solid #4caf50;
+			}
+			
+		ul.pagination li a:hover:not(active) {
+			background-color: #ddd;
+			}
+			
+		div.centerpag {
+			text-align: center;
+			}
+			
+			/*style examples*/
+	
+	
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img{margin-bottom:-8px}
+</style>
+<body>
+	
+	<header class="pageheader">
+	  <h1>W3.CSS Template</h1>
+	</header>
+	
+	<div class="centerpag">
+		  <ul class="pagination">
+			<li><a href="examples6.html">«</a></li>
+		    <li><a href="examples1.html">1</a></li>
+		    <li><a href="examples2.html">2</a></li>
+		    <li><a href="examples3.html">3</a></li>
+		    <li><a href="examples4.html">4</a></li>
+		    <li><a href="examples5.html">5</a></li>
+		    <li><a href="examples6.html">6</a></li>
+		    <li><a href="#" class="active">7</a></li>
+		    <li><a href="examples8.html">8</a></li>
+		    <li><a href="examples9.html">9</a></li>
+		    <li><a href="examples10.html">10</a></li>
+		    <li><a href="examples11.html">11</a></li>
+		    <li><a href="examples12.html">12</a></li>
+		    <li><a href="examples13.html">13</a></li>
+		    <li><a href="examples14.html">14</a></li>
+		    <li><a href="examples15.html">15</a></li>
+		    <li><a href="examples8.html">»</a></li>
+		  </ul>
+		</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="photography.html" class="w3-left w3-btn w3-white">MY Photography</a>
+    <a href="#about" class="w3-right w3-btn w3-white">About</a>
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <div class="w3-half">
+      <img src="snow.jpg" style="width:100%">
+      <img src="snow2.jpg" style="width:100%">
+      <img src="snow3.jpg" style="width:100%;">
+    </div>
+
+    <div class="w3-half">
+      <img src="bella.jpg" style="width:100%">
+      <img src="bella2.jpg" style="width:100%">
+      <img src="snow4.jpg" style="width:100%">
+      <img src="pinksky.jpg" style="width:100%;">
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>About</h2>
+  <img src="me2.jpg" class="w3-image w3-padding-32" width="150" height="150">
+  <form style="margin:auto;width:60%" action="form.asp" target="_blank">
+    <p>I really don't have a strong hold of using templates yet. The only way I can think of to make use of them at this point is to copy the code and then edit it. I don't know if there is another way or not. W3Schools has a W3.CSS Tutorial that I plan on going through and hopefull that will clear things up. This is the best I can do for now. I'm also planning on learning more javaScript. It seems that there is so much to learn. So, anyway, this is my CSS Framework example for now.</p>
+    <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
+    <div class="w3-group">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-group">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-group">
+      <label><b>Message</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-btn w3-btn-block w3-padding-12 w3-dark-grey">Send</button>
+  </form>
+  <br>
+  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<nav class="nava">
+	<ul>
+	<li><a href="../../../index.html">Home</a></li>
+	<li><a href="../../photography/photography.html">Photography</a></li>
+	<li><a href="../../resume/resume.html">Resume</a></li>
+	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+	<li><a class="active" href="../projects.html">Projects</a></li>
+	<li style="float: right"><a href="../../about/about.html">About</a></li>
+	</a></li>
+	</ul>
+	</nav>
+ 
+</body>
+</html>
