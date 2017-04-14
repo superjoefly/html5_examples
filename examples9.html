@@ -2,35 +2,36 @@
 
 <html>
 	<head>
-		
+
 	  <title>Examples 9</title>
 	  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <link type="text/css" rel="stylesheet" href="examples.css">
 	  <style>
-		  
+
 		  header{
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-		  
+
 		  /*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -39,81 +40,61 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 			/*style examples*/
-	 
+
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
-	
+
 	<header>
 	<h1>HTML Forms</h1>
 	</header>
-	
-	<div class="centerpag">
-		  <ul class="pagination">
-			<li><a href="examples8.html">«</a></li>
-		    <li><a href="examples1.html">1</a></li>
-		    <li><a href="examples2.html">2</a></li>
-		    <li><a href="examples3.html">3</a></li>
-		    <li><a href="examples4.html">4</a></li>
-		    <li><a href="examples5.html">5</a></li>
-		    <li><a href="examples6.html">6</a></li>
-		    <li><a href="examples7.html">7</a></li>
-		    <li><a href="examples8.html">8</a></li>
-		    <li><a href="#" class="active">9</a></li>
-		    <li><a href="examples10.html">10</a></li>
-		    <li><a href="examples11.html">11</a></li>
-		    <li><a href="examples12.html">12</a></li>
-		    <li><a href="examples13.html">13</a></li>
-		    <li><a href="examples14.html">14</a></li>
-		    <li><a href="examples15.html">15</a></li>
-		    <li><a href="examples10.html">»</a></li>
-		  </ul>
-		</div>
-	
+
+	<hr />
+
 	<h3>Text Input Form with Submit Button</h3>
 	<form>
 	  First Name:<br>
 	  <input type="text" name="firstname" autofocus><br>
 	  Last Name:<br>
 	  <input type="text" name="lastname"><br><br>
-	  
+
 	  <button type="submit">SUBMIT</button>
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Radio Button Input with Submit Button</h3>
-	
+
 	<form>
 	  <input type="radio" name="gender" value="male"> Male<br>
 	  <input type="radio" name="gender" value="female"> Female<br>
 	  <input type="radio" name="gender" value="other"> Other<br><br>
-	  
+
 	  <input type="submit" value="SUBMIT">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Grouping Form Data</h3>
-	
+
 	<form action="">
 	  <fieldset>
 	    <legend>Personal Information:</legend>
@@ -124,11 +105,11 @@
 	    <input type="submit" value="SUBMIT">
 	  </fieldset>
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Dropdown List</h3>
-	
+
 	<form action="">
 	  <select name="birds">
 	    <option value="blue Bird">Blue Bird</option>
@@ -138,27 +119,27 @@
 	  </select><br><br>
 	  <input type="submit" value="SUBMIT">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Multi-line Input Field (text-area)</h3>
-	
+
 	<form action="">
 	  <textarea name="message" rows="15" cols="30">Message goes here!
 	  </textarea><br><br>
 	  <input type="submit" value="SUBMIT">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>A Clickable Button with Alert Message</h3>
-	
+
 	<button type="button" onclick="alert('Whats Up!')">Click Me!</button>
-	
+
 	<hr>
-	
+
 	<h3>Datalist Element (Dropdown on Text Input)</h3>
-	
+
 	<h4>Browser:</h4>
 	<form action="">
 	  <input list="browsers" name="browser">
@@ -171,14 +152,14 @@
 	  </datalist>
 	  <input type="submit">
 	</form>
-	
+
 	<br>
 	<br>
-	
+
 	<hr>
-	
+
 	<h3>Form with Keygen (Security)</h3>
-	
+
 	<form action="">
 	  Username: <input type="text" name="user">
 	  <br><br>
@@ -186,11 +167,11 @@
 	  <br><br>
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Output Element</h3>
-	
+
 	<form action=""
 	oninput="x.value=parseInt(a.value)+parseInt(b.value)">
 	0
@@ -202,13 +183,13 @@
 	<br><br>
 	<input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h1>Input Types</h1>
-	
+
 	<h3>Input Type Text</h3>
-	
+
 	<p>Single Line Text Input:</p>
 	<form>
 	  First Name:<br>
@@ -216,22 +197,22 @@
 	  Last name:<br>
 	  <input type="text" name="lastname">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Password</h3>
-	
+
 	<form>
 	  User Name:<br>
 	  <input type="text" name="username"><br>
 	  User Password:<br>
 	  <input type="password" name="pswd">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Submit</h3>
-	
+
 	<form>
 	First Name:<br>
 	<input type="text" name="firstname"><br>
@@ -239,11 +220,11 @@
 	<input type="text" name="lastname"><br><br>
 	<input type="submit" value="SUBMIT">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Reset</h3>
-	
+
 	<form action="">
 	  Name:<br>
 	  <input type="text" name="name" value="default"><br>
@@ -252,11 +233,11 @@
 	  <input type="submit" value="SUBMIT">
 	  <input type="reset" value="RESET">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Radio</h3>
-	
+
 	<form action="">
 	  <input type="radio" name="color" value="red"> Red
 	  <input type="radio" name="color" value="blue"> Blue
@@ -265,78 +246,78 @@
 	  <input type="submit" value="SUBMIT">
 	  <input type="reset" value="RESET">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Checkbox</h3>
-	
+
 	<form action="">
 	  <input type="checkbox" name="clothes" value="Shoes">I have shoes<br>
 	  <input type="checkbox" name="clothes" value="Socks">I have socks<br><br>
 	  <input type="submit" value="Submit">
 	  <input type="reset" value="Reset">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Button</h3>
-	
+
 	<form action="">
 	  <input type="button" onclick="alert('Hello World!!!')" value="Click Me!">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Number</h3>
-	
+
 	<form action="">
 		Quantity (between 1 and 10):
 	  <input type="number" name="quantity" min="1" max="10">
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Restriction</h3>
-	
+
 	<form action="">
 		Quantity:(in steps of 10)
 	  <input type="number" name="quantity" min="0" max="100" step="10" value="70">
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Date</h3>
-	
+
 	<form action="">
 		Birthday:
 	  <input type="date" name="birthday">
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Color</h3>
-	
+
 	<form action="">
 		Pick your favorite color:
 	  <input type="color" name="favcolor">
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Range</h3>
-	
+
 	<form action="">
 		Points:
 	  <input type="range" name="points" min="50" max="100">
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Month</h3>
 	<form action="">
 	Birth Month and Year:
@@ -344,126 +325,126 @@
 	<input type="submit">
 	<input type="reset">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Week</h3>
-	
+
 	<form action="">
 	  Select a week:
 	  <input type="week" name="week_yr">
 	  <input type="submit" value="Submit">
-	</form>	
-	
+	</form>
+
 	<hr>
-	
+
 	<h3>Input Type Time</h3>
-	
+
 	<form action="">
 	Select a Time:
 	<input type="time" name="usr_time">
 	<input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Datetime-Local</h3>
-	
+
 	<form action="">
 	Birthday (date and time):
 	<input type="datetime-local" name="birthdaytime">
 	<input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Email</h3>
-	
+
 	<form action="">
 	Enter E-mail:
 	<input type="email" name="email">
 	<input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Search</h3>
-	
+
 	<form action="">
 	Search Bing:
 	<input type="search" name="bingsearch">
 	<input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type Tel</h3>
-	
+
 	<form action="">
 	  Enter Telephone:
 	  <input type="tel" name="usrtel">
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Input Type URL</h3>
-	
+
 	<form action="">
 	Add Your Homepage:
 	<input type="url" name="homepage">
 	<input type="submit">
 	</form>
-	
+
 	<h1>Input Attributes</h1>
-	
+
 	<h3>Value Attribute</h3>
-	
+
 	<form action="">
 	  First Name:<br>
 	  <input type="text" name="fname" value="Joey">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Readonly Attribute</h3>
-	
+
 	<form action="">
 	First Name:
 	 <input type="text" name="fname" value="Joey" readonly>
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Disabled Attribute</h3>
-	
+
 	<form action="">
 	  First Name:
 	  <input type="text" name="fname" value="Joey" disabled>
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Size Attribute</h3>
-	
+
 	<form action="">
 		First Name:
 	  <input type="text" name="fname" value="Joey" size="40">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Maxlength Attribute</h3>
-	
+
 	<form action="">
 	  First Name:
 	  <input type="text" name="fname" maxlength="15">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Autocomplete (form/input) Attribute</h3>
-	
+
 	<form action="" autocomplete="on">
 	  First Name: <input type="text" name="fname"><br><br>
 	  Last Name: <input type="text" name="lname"><br><br>
@@ -471,103 +452,103 @@
 	  <input type="submit">
 	  <input type="reset">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Nonvalidate (form) Attribute</h3>
-	
+
 	<form action="" nonvalidate>
 	  E-mail: <input type="email" name="usr_email">
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Autofocus (input) Attribute</h3>
-	
+
 	<form action="">
 	  First Name: <input type="text" name="fname"><br><br>
 	  Last Name: <input type="text" name="lname"><br><br>
 	  E-mail: <input type="text" name="email" autofocus><br><br>
 	  <input type="submit">
 	</form>
-	
+
 	<hr>
-	
+
 	<h3>Form Attribute</h3>
-	
+
 	<p>In this example, the 2nd input field is still a part of the form.</p>
 	<form action="" id="form1">
 	  First Name: <input type="text" name="fname"><br><br>
 	  <input type="submit">
 	</form><br>
-	
+
 	  Last Name: <input type="text" name="lname" form="form1">
-	  
+
 	  <hr>
-	  
+
 	  <h3>Formaction Attribute</h3>
-	  
+
 	  <p>This overrides the action attribute</p>
-	  
+
 	  <form action="">
 	    First Name: <input type="text" name="fname"><br><br>
 	    Last Name: <input type="text" name="lname"><br><br>
 	    <input type="submit"><br><br>
 	    <input type="submit" formaction="" value="Submit as admin">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Formenctype Attribute</h3>
-	  
+
 	  <p>Specifies how the form data should be encoded</p>
-	  
+
 	  <form action ="" method="post">
 	    First Name: <input type="text" name="fname"><br><br>
 	    <input type="submit" value="Submit">
 	    <input type="submit" formenctype="" value="Submit as form data"
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Formmethod Attribute</h3>
-	  
+
 	  <p>Defines the HTTP method for sending form-data</p>
-	  
+
 	  <form action="" method="get">
 	    First Name: <input type="text" name="fname"><br><br>
 	    <input type="submit" value="Submit">
 	    <input type="submit" formmethod="" formaction=""value="Submit using Post" >
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Formnovalidate Method</h3>
-	  
+
 	  <p>Overrides novalidate attribute of form-element</p>
-	  
+
 	  <form action="">
 	    E-mail: <input type="email" name="usrid"><br><br>
 	    <input type="submit" value="Submit"><br><br>
 	    <input type="submit" formnovalidate value="Submit without validation">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Formtarget Attribute</h3>
-	  
+
 	  <p>Specifies a name or keyword that indicates where to display the response that is received after submitting the form</p>
-	  
+
 	  <form action="">
 	    First Name: <input type="text" name="fname"><br><br>
 	    Last Name: <input type="text" name="lname"><br><br>
 	    <input type="submit" value="Submit as Normal">
 	    <input type="submit" formtarget="_blank" value="Submit in New Window">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Height and Width Attribute</h3>
 	  <p>The blue star is the submit button and has height and width of 50px</p>
 	  <form action="">
@@ -575,11 +556,11 @@
 		  Last Name: <input type="text" name="lname"><br><br>
 	  <input type="image" src="bluestar.png" alt="Submit" width="50" height="50">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>List Attribute</h3>
-	  
+
 	  <form action="" method="get">
 	    <input list="browsers" name="browser">
 	    <datalist id="browsers">
@@ -591,78 +572,102 @@
 	    </datalist>
 	    <input type="submit">
 	    </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Min and Max Attributes</h3>
-	  
+
 	  <form action="">
 	  Enter a date before 1980-01-01: <input type="date" name="date" max="1979-12-31"><br><br>
 	  Enter a date after 2000-01-01: <input type="date" name="date" min="2000-01-02"><br><br>
 	  Quantity (between 1 and 10): <input type="number" name="quantity" min="1" max="10"><br><br>
 	  <input type="submit">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Multiple Attribute</h3>
-	  
+
 	  <p>File upload field that accepts multiple values..can select more than one file when browsing for files</p>
-	  
+
 	  <form action="action_page.php">
         Select images: <input type="file" name="img" multiple><br><br>
         <input type="submit">
       </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Pattern Attribute</h3>
-	  
+
 	  <form action="">
 	    Three Letter Country Code: <input type="text" name="country_code" pattern="[A-Za-z] {3}" title="Three Letter Country Code"><br><br>
 	    <input type="submit">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Placeholder Attribute</h3>
-	  
+
 	  <form action="">
 	    <input type="text" name="fname" placeholder="First Name"><br><br>
 	    <input type="text" name="lname" placeholder="Last Name"><br><br>
 	    <input type="submit">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Required Attribute</h3>
-	  
+
 	  <form action="">
 	    Username (required): <input type="text" name="usrname" required><br><br>
 	    <input type="submit">
 	  </form>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Step Attribute</h3>
-	  
+
 	  <form action="">
 	    <input type="number" name="points" step="5"><br><br>
 	    <input type="submit">
 	  </form>
-	  
-	<nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
-	</nav>
-	
+
+		<hr />
+
+		<div class="centerpag">
+			  <ul class="pagination">
+				<li><a href="examples8.html">«</a></li>
+			    <li><a href="examples1.html">1</a></li>
+			    <li><a href="examples2.html">2</a></li>
+			    <li><a href="examples3.html">3</a></li>
+			    <li><a href="examples4.html">4</a></li>
+			    <li><a href="examples5.html">5</a></li>
+			    <li><a href="examples6.html">6</a></li>
+			    <li><a href="examples7.html">7</a></li>
+			    <li><a href="examples8.html">8</a></li>
+			    <li><a href="#" class="active">9</a></li>
+			    <li><a href="examples10.html">10</a></li>
+			    <li><a href="examples11.html">11</a></li>
+			    <li><a href="examples12.html">12</a></li>
+			    <li><a href="examples13.html">13</a></li>
+			    <li><a href="examples14.html">14</a></li>
+			    <li><a href="examples15.html">15</a></li>
+			    <li><a href="examples10.html">»</a></li>
+			  </ul>
+			</div>
+
+
+		<nav class="nava">
+			<ul>
+			<li><a href="../../../index.html">Home</a></li>
+			<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+			<li><a href="../../resume/resume.html">Resume</a></li>
+			<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+			<li><a class="active" href="../projects.html">Projects</a></li>
+			<li style="float: right"><a href="../../about/about.html">About</a></li>
+			</ul>
+		</nav>
+
 	</body>
 
 </html>

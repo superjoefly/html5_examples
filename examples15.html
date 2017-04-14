@@ -2,36 +2,36 @@
 
 <html manifest="demo.appcache">
 	<head>
-		
+
 	  <title>Examples 15</title>
 	  <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <link type="text/css" rel="stylesheet" href="examples.css">
 	  <style>
-		  
+
 	  header{
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-		  
+
 		  /*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -40,64 +40,45 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 			/*style examples*/
-			
+
 		* {
 		  box-sizing: border-box;
 		  }
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
-		
+
 	<header>
 	<h1>HTML5 Local Storage</h1>
 	</header>
-	
-	<div class="centerpag">
-		  <ul class="pagination">
-			<li><a href="examples14.html">«</a></li>
-		    <li><a href="examples1.html">1</a></li>
-		    <li><a href="examples2.html">2</a></li>
-		    <li><a href="examples3.html">3</a></li>
-		    <li><a href="examples4.html">4</a></li>
-		    <li><a href="examples5.html">5</a></li>
-		    <li><a href="examples6.html">6</a></li>
-		    <li><a href="examples7.html">7</a></li>
-		    <li><a href="examples8.html">8</a></li>
-		    <li><a href="examples9.html">9</a></li>
-		    <li><a href="examples10.html">10</a></li>
-		    <li><a href="examples11.html">11</a></li>
-		    <li><a href="examples12.html">12</a></li>
-		    <li><a href="examples13.html">13</a></li>
-		    <li><a href="examples14.html">14</a></li>
-		    <li><a href="#" class="active">15</a></li>
-		  </ul>
-		</div>
-	
+
+	<hr />
+
 	<h3>The localStorage Object</h3>
-	
+
 	<p>Data is stored with <b>no expiration date</b>.</p>
-	
-	
+
+
 	<div id="result"></div>
-	
+
 	<script>
 	  //Check browser support
 	  if (typeof(Storage) !== "undefined") {
@@ -106,28 +87,28 @@
 		  //Retrieve
 		  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 	  }
-	  
+
 	  else {
 		  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 		  }
-		  
+
 		  //Remove localStorage item
-		  
+
 	  localStorage.removeItem("lasname");
 	</script>
-	
+
 	<hr>
-	
+
 	<h3>Click Counter</h3>
-	
+
 	<p><button onclick="clickCounter()" type="button">Click Me!</button></p>
-	
+
 	<div id="result2"></div>
-	
+
 	<p>Click the button to see the counter increase.</p>
-	
+
 	<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
-	
+
 	<script>
 	  function clickCounter() {
 		  if(typeof(Storage) !== "undefined") {
@@ -142,19 +123,19 @@
 				  }
 		  }
 	</script>
-	
+
 	<hr>
-	
+
 	<h3>The sessionStorage Object</h3>
-	
+
 	<p><b>Note:</b> The <b>sessionStorage Object</b> is equal to the localStorage object except that it <b>stores the data for oly one session</b> (data is deleted with the user closes the specific browser tab.)</p>
-	
+
 	<hr>
-	
+
 	<h1>HTML5 Application Cache</h1>
-	
+
 	<p>With application chache, a web application is cached and accessible without an internet connection.</p>
-	
+
 	<p>Advantages of application cache:
 	  <ol>
 	    <li><b>Offline browsing</b> - users can use the application when they're off line.</li>
@@ -162,17 +143,17 @@
 	    <li><b>Reduced server load</b> - the browser will only download updated/changed resources from the server.</li>
 	  </ol>
 	</p>
-	
+
 	<p>To enable application cache, include the manifest attribute in the document's opening html tag:
 	(html manifest="demo.appcache")...see above!
 	</p>
-	
+
 	<p>If the manifest attribute is not specified, the page will not be chached (unless the page is specified <b>directly</b> in the manifest file).</p>
-	
+
 	<p><b>Note:</b> A manifest file needs to be served with the <b>correct media type</b>, which is "text/cache-manifest". Must be configured on the web server.</p>
-	
+
 	<h3>The Manifest File</h3>
-	
+
 	<p>The manifest file is a simple text file, which tells the browser what to cache (and what to never cache).</p>
 
 	<p>The manifest file has three sections:
@@ -182,9 +163,9 @@
 	    <li><b>Fallback</b> - Files listed under this header specifies fallback pages if a page is inaccessible</li>
 	  </ol>
 	</p>
-	
+
 	<h3>Updating the Cache</h3>
-	
+
 	<p>Once an application is cached, it remains cached until one of the following happens:
 	  <ul>
 	    <li>The user clears the browser's cache</li>
@@ -192,9 +173,9 @@
 	    <li>The application cache is programmatically updated</li>
 	  </ul>
 	</p>
-	
+
 	<p><b>Example:</b> complete cache manifest file:</p>
-	
+
 	<pre>
 CACHE MANIFEST
 # 2012-02-21 v1.0.0
@@ -208,17 +189,17 @@ login.asp
 FALLBACK:
 /html/ /offline.html
 	</pre>
-	
+
 	<p><b>Note:</b> BE CAREFUL what you cache. Once a file is chached, the browser will continue to show the cached version, even if you change the file on the server. To ensure that the browser updates the chache, you need to change the manifest file. <b>Subnote:</b> Browsers may have different size limits for chached data (some browsers have a 5mb limit per site).</p>
-	
+
 	<hr>
-	
+
 	<h1>HTML5 Web Workers</h1>
-	
+
 	<p>A <b>web worker</b> is a JavaScript running in the background, without affecting the performance of the page. It runs independently of other scripts so that the user can continue using the page.</p>
-	
+
 	<h3>HTML Web Workers Example</h3>
-	
+
 	<p>Count numbers: <output id="result4"></output></p>
 <button onclick="startWorker()">Start Worker</button>
 <button onclick="stopWorker()">Stop Worker</button>
@@ -252,15 +233,15 @@ function stopWorker() {
 <hr>
 
 	<h1>Server-Sent Events</h1>
-	
+
 	<p><b>Server-Sent Events</b> allow a web page to automatically get updates from a server.</p>
-	
+
 	<h3>Receive Server-Sent Event Notifications</h3>
-	
+
 	<h3>Note: In order for this example to work, I would need a server capable of sending data updates (like PHP or ASP).</h3>
-	
+
 	<div id="result5"></div>
-	
+
 	<script>
 	  if(typeof(EventSource) !== "undefined") {
 		  var source = new
@@ -272,19 +253,41 @@ function stopWorker() {
 			  document.getElementById("result5").innerHTML = "Sorry, your browser does not support server-sent events...";
 			  }
 	</script>
-	
+
+	<hr />
+
+	<div class="centerpag">
+		  <ul class="pagination">
+			<li><a href="examples14.html">«</a></li>
+		    <li><a href="examples1.html">1</a></li>
+		    <li><a href="examples2.html">2</a></li>
+		    <li><a href="examples3.html">3</a></li>
+		    <li><a href="examples4.html">4</a></li>
+		    <li><a href="examples5.html">5</a></li>
+		    <li><a href="examples6.html">6</a></li>
+		    <li><a href="examples7.html">7</a></li>
+		    <li><a href="examples8.html">8</a></li>
+		    <li><a href="examples9.html">9</a></li>
+		    <li><a href="examples10.html">10</a></li>
+		    <li><a href="examples11.html">11</a></li>
+		    <li><a href="examples12.html">12</a></li>
+		    <li><a href="examples13.html">13</a></li>
+		    <li><a href="examples14.html">14</a></li>
+		    <li><a href="#" class="active">15</a></li>
+		  </ul>
+		</div>
+
 	<nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
+		<ul>
+		<li><a href="../../../index.html">Home</a></li>
+		<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+		<li><a href="../../resume/resume.html">Resume</a></li>
+		<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+		<li><a class="active" href="../projects.html">Projects</a></li>
+		<li style="float: right"><a href="../../about/about.html">About</a></li>
+		</ul>
 	</nav>
-	
+
 	</body>
 
 </html>

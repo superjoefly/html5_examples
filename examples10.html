@@ -2,34 +2,35 @@
 
 <html>
 	<head>
-		
+
 	  <title>Examples 10</title>
 	  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <link type="text/css" rel="stylesheet" href="examples.css">
 	  <style>
 		  header{
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-		  
+
 		  /*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -38,32 +39,154 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 			/*style examples*/
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
-	
+
 	<header>
 	<h1>HTML5 Canvas</h1>
 	</header>
-	
+
+	<hr />
+
+	<h3>Basic Empty Canvas</h3>
+
+	<canvas id="empty" width="200" height="100" style="border: 1px solid red">
+	Browser does not support canvas.
+	</canvas>
+
+	<hr>
+
+	<h3>Canvas with Diagonal Line</h3>
+
+	<canvas id="diagonal" width="200px" height="100px" style="border: 1px solid blue">Browser does not support canvas.</canvas>
+
+	<script>
+	var c = document.getElementById("diagonal");
+	var ctx = c.getContext("2d");
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+	</script>
+
+	<hr>
+
+	<h3>Canvas with Circle</h3>
+
+	<canvas id="circle" width="200" height="100" style="border: 1px solid green">Browser does not support canvas.</canvas>
+
+	<script>
+	  var c = document.getElementById("circle");
+	  var ctx = c.getContext("2d");
+	  ctx.beginPath();
+	  ctx.arc(95,50,40,0,2*Math.PI);
+	  ctx.stroke();
+	</script>
+
+	<hr>
+
+	<h3>Canvas with Text</h3>
+
+	<canvas id="text" height="100" width="200" style="border: 1px solid orange">Browser does not support canvas.</canvas>
+
+	<script>
+	  var c = document.getElementById("text");
+	  var ctx = c.getContext("2d");
+	  ctx.font = "30px Cursive";
+	  ctx.fillText("Hello World",10,50);
+	</script>
+
+	<hr>
+
+	<h3>Canvas with Stroke Text</h3>
+
+	<canvas id="stroke" height="100px" width="200px" style="border: 1px solid purple">Browser does not support canvas.</canvas>
+
+	<script>
+	  var c = document.getElementById("stroke");
+	  var ctx = c.getContext("2d");
+	  ctx.font = "30px Helvetica";
+	  ctx.strokeText("Hello World",10,50);
+	</script>
+
+	<hr>
+
+	<h3>Canvas with Linear Gradient</h3>
+
+	<canvas id="gradient" height="100px" width="200px" style="border: 1px solid blue">Browser does not support canvas.</canvas>
+
+	<script>
+	  var c = document.getElementById("gradient");
+	  var ctx = c.getContext("2d");
+
+	  var grd = ctx.createLinearGradient(0,0,200,0);
+	  grd.addColorStop(0,"green");
+	  grd.addColorStop(1,"orange");
+
+	  ctx.fillStyle = grd;
+	  ctx.fillRect(10,10,150,80);
+	</script>
+
+	<hr>
+
+	<h3>Canvas with Circular Gradient</h3>
+
+	<canvas id="cirgrd" height="100px" width="200px" style="border: 1px solid red;">Browser does not support canvas.</canvas>
+
+	<script>
+	  var c = document.getElementById("cirgrd");
+	  var ctx = c.getContext("2d");
+
+	  var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+	  grd.addColorStop(0,"blue");
+	  grd.addColorStop(1,"white");
+
+	  ctx.fillStyle = grd;
+	  ctx.fillRect(10,10,150,80);
+	</script>
+
+	<hr>
+
+	<h3>Canvas with Image</h3>
+
+	<p>Image to use:</p>
+	<img id="sunearth" src="sunearth.jpg" alt="sun and earth" height="100px" width="200px">
+
+	<p>Canvas to fill:</p>
+
+	<canvas id="sunEarth" height="100px" width="200px" style="border: 1px solid orange;">Browser does not support canvas.</canvas>
+
+	<p><button onclick="sunEarth()">Click Me!</button></p>
+
+	<script>
+	  function sunEarth() {
+		  var c = document.getElementById("sunEarth");
+		  var ctx = c.getContext("2d");
+		  var img = document.getElementById("sunearth");
+		  ctx.drawImage(img,0,0,200,100);
+		  }
+	</script>
+
+	<hr />
+
 	<div class="centerpag">
 		  <ul class="pagination">
 			<li><a href="examples9.html">«</a></li>
@@ -85,138 +208,19 @@
 		    <li><a href="examples11.html">»</a></li>
 		  </ul>
 		</div>
-	
-	<h3>Basic Empty Canvas</h3>
-	
-	<canvas id="empty" width="200" height="100" style="border: 1px solid red">
-	Browser does not support canvas.
-	</canvas>
-	
-	<hr>
-	
-	<h3>Canvas with Diagonal Line</h3>
-	
-	<canvas id="diagonal" width="200px" height="100px" style="border: 1px solid blue">Browser does not support canvas.</canvas>
-	
-	<script>
-	var c = document.getElementById("diagonal");
-	var ctx = c.getContext("2d");
-	ctx.moveTo(0,0);
-	ctx.lineTo(200,100);
-	ctx.stroke();
-	</script>
-	
-	<hr>
-	
-	<h3>Canvas with Circle</h3>
-	
-	<canvas id="circle" width="200" height="100" style="border: 1px solid green">Browser does not support canvas.</canvas>
-	
-	<script>
-	  var c = document.getElementById("circle");
-	  var ctx = c.getContext("2d");
-	  ctx.beginPath();
-	  ctx.arc(95,50,40,0,2*Math.PI);
-	  ctx.stroke();
-	</script>
-	
-	<hr>
-	
-	<h3>Canvas with Text</h3>
-	
-	<canvas id="text" height="100" width="200" style="border: 1px solid orange">Browser does not support canvas.</canvas>
-	
-	<script>
-	  var c = document.getElementById("text");
-	  var ctx = c.getContext("2d");
-	  ctx.font = "30px Cursive";
-	  ctx.fillText("Hello World",10,50);
-	</script>
-	
-	<hr>
-	
-	<h3>Canvas with Stroke Text</h3>
-	
-	<canvas id="stroke" height="100px" width="200px" style="border: 1px solid purple">Browser does not support canvas.</canvas>
-	
-	<script>
-	  var c = document.getElementById("stroke");
-	  var ctx = c.getContext("2d");
-	  ctx.font = "30px Helvetica";
-	  ctx.strokeText("Hello World",10,50);
-	</script>
-	
-	<hr>
-	
-	<h3>Canvas with Linear Gradient</h3>
-	
-	<canvas id="gradient" height="100px" width="200px" style="border: 1px solid blue">Browser does not support canvas.</canvas>
-	
-	<script>
-	  var c = document.getElementById("gradient");
-	  var ctx = c.getContext("2d");
-	  
-	  var grd = ctx.createLinearGradient(0,0,200,0);
-	  grd.addColorStop(0,"green");
-	  grd.addColorStop(1,"orange");
-	  
-	  ctx.fillStyle = grd;
-	  ctx.fillRect(10,10,150,80);
-	</script>
-	
-	<hr>
-	
-	<h3>Canvas with Circular Gradient</h3>
-	
-	<canvas id="cirgrd" height="100px" width="200px" style="border: 1px solid red;">Browser does not support canvas.</canvas>
-	
-	<script>
-	  var c = document.getElementById("cirgrd");
-	  var ctx = c.getContext("2d");
-	  
-	  var grd = ctx.createRadialGradient(75,50,5,90,60,100);
-	  grd.addColorStop(0,"blue");
-	  grd.addColorStop(1,"white");
-	  
-	  ctx.fillStyle = grd;
-	  ctx.fillRect(10,10,150,80);
-	</script>
-	
-	<hr>
-	
-	<h3>Canvas with Image</h3>
-	
-	<p>Image to use:</p>
-	<img id="sunearth" src="sunearth.jpg" alt="sun and earth" height="100px" width="200px">
-	
-	<p>Canvas to fill:</p>
-	
-	<canvas id="sunEarth" height="100px" width="200px" style="border: 1px solid orange;">Browser does not support canvas.</canvas>
-	
-	<p><button onclick="sunEarth()">Click Me!</button></p>
-	
-	<script>
-	  function sunEarth() {
-		  var c = document.getElementById("sunEarth");
-		  var ctx = c.getContext("2d");
-		  var img = document.getElementById("sunearth");
-		  ctx.drawImage(img,0,0,200,100);
-		  }
-	</script>
-	
-	
+
+
 	<nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
+		<ul>
+		<li><a href="../../../index.html">Home</a></li>
+		<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+		<li><a href="../../resume/resume.html">Resume</a></li>
+		<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+		<li><a class="active" href="../projects.html">Projects</a></li>
+		<li style="float: right"><a href="../../about/about.html">About</a></li>
+		</ul>
 	</nav>
-	
+
 	</body>
 
 </html>

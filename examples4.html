@@ -2,35 +2,36 @@
 
 <html>
 	<head>
-		
+
 	  <title>Examples 4</title>
 	  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <link type="text/css" rel="stylesheet" href="examples.css">
 	  <style>
-		  
+
 		 header{
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-			
+
 			/*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -39,27 +40,27 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 		/*style examples*/
-		  
+
 		div#clearfix {
 			clear: both;
 			}
-		
+
 	    ul#horizontal {
 			list-style-type: none;
 			margin: 0;
@@ -67,11 +68,11 @@
 			overflow: hidden;
 			background-color: #666666;
 			}
-			
+
 		ul#horizontal li{
 			float: left;
 			}
-			
+
 		ul#horizontal li a {
 			display: block;
 			color: white;
@@ -79,20 +80,159 @@
 			padding: 16px;
 			text-decoration: none;
 			}
-			
+
 		ul#horizontal li a:hover {
 			background-color: #333333;
 			}
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
 		<header>
-	  <h1>HTML Lists</h1>
-	    </header>
-		
-	  <div class="centerpag">
+	  	<h1>HTML Lists</h1>
+	  </header>
+
+	  <hr />
+
+	  <h3>Unordered List</h3>
+
+	  <ul>Groceries:
+	    <li>Coffee</li>
+	    <li>Milk</li>
+	    <li>Bagels</li>
+	    <li>Strawberries</li>
+	    <li>Orange Juice</li>
+	  </ul>
+
+	  <hr>
+
+	  <h3>Unordered List with List Item Markers</h3>
+
+	  <p>disc (default):</p>
+	  <ul>
+	    <li>Coffee</li>
+	    <li>Tea</li>
+	    <li>Milk</li>
+	  </ul>
+
+	  <p>cirle:</p>
+	  <ul style="list-style-type: circle">
+	    <li>Ted</li>
+	    <li>Jen</li>
+	    <li>Bob</li>
+	  </ul>
+
+	  <p>square:</p>
+	  <ul style="list-style-type: square">
+	    <li>Orange</li>
+	    <li>Green</li>
+	    <li>Yellow</li>
+	  </ul>
+
+	  <p>none:</p>
+	  <ul style="list-style-type: none">
+	    <li>Up</li>
+	    <li>Down</li>
+	    <li>Left</li>
+	  </ul>
+
+	  <hr>
+
+	  <h3>Ordered List</h3>
+
+	  <ol>
+	    <li>Coffee</li>
+	    <li>Tea</li>
+	    <li>Milk</li>
+	    <li>Orange Juice</li>
+	    <li>Bagels</li>
+	  </ol>
+
+	  <hr>
+
+	  <h3>Ordered List - List Item Types</h3>
+
+	  <p>Numbered (default):</p>
+	  <ol type="1">
+	    <li>Coffee</li>
+	    <li>Bread</li>
+	    <li>Milk</li>
+	  </ol>
+
+	  <p>Uppercase Letter:</p>
+	  <ol type="A">
+	    <li>Yellow</li>
+	    <li>Blue</li>
+	    <li>Red</li>
+	  </ol>
+
+	  <p>Lowercase Letter:</p>
+	  <ol type="a">
+	    <li>Tom</li>
+	    <li>Jim</li>
+	    <li>Sarah</li>
+	  </ol>
+
+	  <p>Uppercase Roman Numbers:</p>
+	  <ol type="I">
+	    <li>Up</li>
+	    <li>Down</li>
+	    <li>Right</li>
+	  </ol>
+
+	  <p>Lowercase Roman Numbers:</p>
+	  <ol type="i">
+	    <li>In</li>
+	    <li>Out</li>
+	    <li>Through</li>
+	  </ol>
+
+	  <hr>
+
+	  <h3>Description List</h3>
+
+	  <dl>
+	    <dt>Coffee</dt>
+	      <dd>-hot black drink</dd>
+	    <dt>Milk</dt>
+	      <dd>-cold white drink</dd>
+	    <dt>Tea</dt>
+	      <dd>-hot brown drink</dd>
+	  </dl>
+
+	  <hr>
+
+	  <h3>Nested List (list inside a list)</h3>
+
+	  <ul>
+	    <li>Coffee</li>
+	    <li>Tea
+	      <ul>
+	        <li>Red</li>
+	        <li>Green</li>
+	        <li>Black</li>
+	      </ul>
+	    </li>
+	    <li>Milk</li>
+	  </ul>
+
+	  <div id="clearfix"></div>
+
+	  <hr>
+
+	  <h3>Horizontal List (nav-bar)</h3>
+
+	  <ul id="horizontal">
+	    <li><a href="#home">Home</a></li>
+	    <li><a href="#about">About</a></li>
+	    <li><a href="#news">News</a></li>
+	    <li><a href="#contact">Contact</a></li>
+	  </ul>
+
+		<hr />
+
+		<div class="centerpag">
 		  <ul class="pagination">
 			<li><a href="examples3.html">«</a></li>
 		    <li><a href="examples1.html">1</a></li>
@@ -113,154 +253,18 @@
 		    <li><a href="examples5.html">»</a></li>
 		  </ul>
 		</div>
-	  
-	  <h3>Unordered List</h3>
-	  
-	  <ul>Groceries:
-	    <li>Coffee</li>
-	    <li>Milk</li>
-	    <li>Bagels</li>
-	    <li>Strawberries</li>
-	    <li>Orange Juice</li>
-	  </ul>
-	  
-	  <hr>
-	  
-	  <h3>Unordered List with List Item Markers</h3>
-	  
-	  <p>disc (default):</p>
-	  <ul>
-	    <li>Coffee</li>
-	    <li>Tea</li>
-	    <li>Milk</li>
-	  </ul>
-	  
-	  <p>cirle:</p>
-	  <ul style="list-style-type: circle">
-	    <li>Ted</li>
-	    <li>Jen</li>
-	    <li>Bob</li>
-	  </ul>
-	  
-	  <p>square:</p>
-	  <ul style="list-style-type: square">
-	    <li>Orange</li>
-	    <li>Green</li>
-	    <li>Yellow</li>
-	  </ul>
-	  
-	  <p>none:</p>
-	  <ul style="list-style-type: none">
-	    <li>Up</li>
-	    <li>Down</li>
-	    <li>Left</li>
-	  </ul>
-	  
-	  <hr>
-	  
-	  <h3>Ordered List</h3>
-	  
-	  <ol>
-	    <li>Coffee</li>
-	    <li>Tea</li>
-	    <li>Milk</li>
-	    <li>Orange Juice</li>
-	    <li>Bagels</li>
-	  </ol>
-	  
-	  <hr>
-	  
-	  <h3>Ordered List - List Item Types</h3>
-	  
-	  <p>Numbered (default):</p>
-	  <ol type="1">
-	    <li>Coffee</li>
-	    <li>Bread</li>
-	    <li>Milk</li>
-	  </ol>
-	  
-	  <p>Uppercase Letter:</p>
-	  <ol type="A">
-	    <li>Yellow</li>
-	    <li>Blue</li>
-	    <li>Red</li>
-	  </ol>
-	  
-	  <p>Lowercase Letter:</p>
-	  <ol type="a">
-	    <li>Tom</li>
-	    <li>Jim</li>
-	    <li>Sarah</li>
-	  </ol>
-	  
-	  <p>Uppercase Roman Numbers:</p>
-	  <ol type="I">
-	    <li>Up</li>
-	    <li>Down</li>
-	    <li>Right</li>
-	  </ol>
-	  
-	  <p>Lowercase Roman Numbers:</p>
-	  <ol type="i">
-	    <li>In</li>
-	    <li>Out</li>
-	    <li>Through</li>
-	  </ol>
-	  
-	  <hr>
-	  
-	  <h3>Description List</h3>
-	  
-	  <dl>
-	    <dt>Coffee</dt>
-	      <dd>-hot black drink</dd>
-	    <dt>Milk</dt>
-	      <dd>-cold white drink</dd>
-	    <dt>Tea</dt>
-	      <dd>-hot brown drink</dd>
-	  </dl>
-	  
-	  <hr>
-	  
-	  <h3>Nested List (list inside a list)</h3>
-	  
-	  <ul>
-	    <li>Coffee</li>
-	    <li>Tea
-	      <ul>
-	        <li>Red</li>
-	        <li>Green</li>
-	        <li>Black</li>
-	      </ul>
-	    </li>
-	    <li>Milk</li>
-	  </ul>
-	  
-	  <div id="clearfix"></div>
-	  
-	  <hr>
-	  
-	  <h3>Horizontal List (nav-bar)</h3>
-	  
-	  <ul id="horizontal">
-	    <li><a href="#home">Home</a></li>
-	    <li><a href="#about">About</a></li>
-	    <li><a href="#news">News</a></li>
-	    <li><a href="#contact">Contact</a></li>
-	  </ul>
 
-<nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
-	</nav>
-	  
+		<nav class="nava">
+			<ul>
+			<li><a href="../../../index.html">Home</a></li>
+			<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+			<li><a href="../../resume/resume.html">Resume</a></li>
+			<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+			<li><a class="active" href="../projects.html">Projects</a></li>
+			<li style="float: right"><a href="../../about/about.html">About</a></li>
+			</ul>
+		</nav>
+
 	  </body>
 
 </html>

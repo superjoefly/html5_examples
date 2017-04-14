@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		
+
 	  <title>Examples 11</title>
 	  <meta charset="UTF-8">
 	  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -12,25 +12,25 @@
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-		  
+
 		  /*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -39,121 +39,124 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 			/*style examples*/
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
 	<header>
 	  <h1>HTML5 SVG (Scalable Vector Graphics)</h1>
 	</header>
-	  
-	  <div class="centerpag">
-		  <ul class="pagination">
-			<li><a href="examples10.html">«</a></li>
-		    <li><a href="examples1.html">1</a></li>
-		    <li><a href="examples2.html">2</a></li>
-		    <li><a href="examples3.html">3</a></li>
-		    <li><a href="examples4.html">4</a></li>
-		    <li><a href="examples5.html">5</a></li>
-		    <li><a href="examples6.html">6</a></li>
-		    <li><a href="examples7.html">7</a></li>
-		    <li><a href="examples8.html">8</a></li>
-		    <li><a href="examples9.html">9</a></li>
-		    <li><a href="examples10.html">10</a></li>
-		    <li><a href="#" class="active">11</a></li>
-		    <li><a href="examples12.html">12</a></li>
-		    <li><a href="examples13.html">13</a></li>
-		    <li><a href="examples14.html">14</a></li>
-		    <li><a href="examples15.html">15</a></li>
-		    <li><a href="examples12.html">»</a></li>
-		  </ul>
-		</div>
-	  
+
+	  <hr />
+
 	  <h3>SVG Circle</h3>
-	  
+
 	  <svg width="100" height="100">
 	    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="lime"></circle>
 	    Your browser does not support inline SVG.
 	  </svg>
 	</body>
-	
+
 	<hr>
-	
+
 	<h3>SVG Rectangle</h3>
-	
+
 	<svg width="300" height="100">
 	  <rect width="300" height="100" style="fill: beige; stroke-width: 4; stroke: brown"></rect>
 	  Your browser does not support inline SVG.
 	</svg>
-	
+
 	<hr>
-	
+
 	<h3>SVG Rounded Rectangle</h3>
-	
+
 	<svg width="300" height="300">
 	  <rect x="50" y="20" rx="20" ry="20" width="150" height="150" style="fill: purple; stroke: black; stroke-width: 4; opacity: 0.5"></rect>
 	  Your browser does not support inline SVG.
 	</svg>
-	
+
 	<hr>
-	
+
 	<h3>SVG Star (Polygon)</h3>
-	
+
 	<svg width="300" height="300">
 	  <polygon points="100,10 40, 198 190, 78 10, 78 160, 198" style="fill: lime; stroke: red; stroke-width: 3; fill-rule: evenodd;"></polygon>
 	Your browser does not support inline SVG.
 	</svg>
-	
+
 	<hr>
-	
+
 	<h3>SVG Logo</h3>
-	
+
 	<svg height="125" width="400">
 		<defs>
-		  
+
 		  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-		  
+
 		  <stop offset="0%" style="stop-color:green; stop-opacity: 1"/>
-		  
+
 		  <stop offset="100%" style="stop-color:blue; stop-opacity: 1"/>
 		  </linearGradient>
-		  
+
 		</defs>
-		
+
 		<ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)"/>
-		
+
 		<text fill="beige" font-size="35" font-family="cursive" x="65" y="80">SJF</text>
 	Your browser does not support inline SVG.
 	</svg>
 
-<nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
+	<hr />
+
+	<div class="centerpag">
+		<ul class="pagination">
+		<li><a href="examples10.html">«</a></li>
+			<li><a href="examples1.html">1</a></li>
+			<li><a href="examples2.html">2</a></li>
+			<li><a href="examples3.html">3</a></li>
+			<li><a href="examples4.html">4</a></li>
+			<li><a href="examples5.html">5</a></li>
+			<li><a href="examples6.html">6</a></li>
+			<li><a href="examples7.html">7</a></li>
+			<li><a href="examples8.html">8</a></li>
+			<li><a href="examples9.html">9</a></li>
+			<li><a href="examples10.html">10</a></li>
+			<li><a href="#" class="active">11</a></li>
+			<li><a href="examples12.html">12</a></li>
+			<li><a href="examples13.html">13</a></li>
+			<li><a href="examples14.html">14</a></li>
+			<li><a href="examples15.html">15</a></li>
+			<li><a href="examples12.html">»</a></li>
+		</ul>
+	</div>
+
+	<nav class="nava">
+		<ul>
+		<li><a href="../../../index.html">Home</a></li>
+		<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+		<li><a href="../../resume/resume.html">Resume</a></li>
+		<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+		<li><a class="active" href="../projects.html">Projects</a></li>
+		<li style="float: right"><a href="../../about/about.html">About</a></li>
+		</ul>
 	</nav>
-	
+
 
 </html>

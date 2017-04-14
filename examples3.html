@@ -2,35 +2,36 @@
 
 <html>
 	<head>
-		
+
 	  <title>Examples 3</title>
 	  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <link type="text/css" rel="stylesheet" href="examples.css">
 	  <style>
-		  
+
 		header{
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-			
+
 			/*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -39,132 +40,112 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 			/*style examples*/
-		  
+
 	    table#table2, table#table2 th, table#table2 td {
 			border: 1px solid blue;
 			border-collapse: collapse;
 			}
-			
+
 		table#table2 tr th {
 			text-align: left;
 			}
-			
+
 		table#table2 tr, table#table2 td {
 			padding: 15px;
 			}
-			
+
 		table#table3, table#table3 th, table#table3 td {
 			border: 1px solid red;
 			border-spacing: 5px;
 			}
-			
+
 		table#table4, table#table4 th, table#table4 td {
 			border: 1px solid green;
 			border-collapse: collapse;
 			}
-			
+
 		table#table4 th, table#table4 td {
 			padding: 5px;
 			text-align: center;
 			}
-			
+
 		table#table5, table#table5 th, table#table5 td {
 			border: 1px solid orange;
 			border-collapse: collapse;
 			}
-			
+
 		table#table5 th, table#table5 td {
 			padding: 5px;
 			text-align: left;
 			}
-			
+
 		table#caption, table#caption th, table#caption td {
 			border: 1px solid purple;
 			border-collapse: collapse;
 			}
-			
+
 		table#caption th, table#caption td {
 			padding: 5px;
 			text-align: center;
 			}
-			
+
 		table#caption caption {
 			font-weight: bold;
 			}
-			
+
 		table#special {
 			border: 2px solid black;
 			background-color: #ffffd3;
 			}
-		
+
 		table#special th {
 			border: 2px solid black;
 			background-color: #b7b7b7;
 			}
-			
-		
+
+
 		table#special td {
 			border: 2px solid brown;
 			border-collapse: collapse;
 			padding: 5px;
 			text-align: center;
 			}
-			
+
 		table#special tr:nth-child(odd) {
 			background-color: #e2dbba;
 			}
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
-		
+
 	  <header>
 	    <h1>HTML Tables</h1>
 	  </header>
-		
-	  <div class="centerpag">
-		  <ul class="pagination">
-			<li><a href="examples2.html">«</a></li>
-		    <li><a href="examples1.html">1</a></li>
-		    <li><a href="examples2.html">2</a></li>
-		    <li><a href="#" class="active">3</a></li>
-		    <li><a href="examples4.html">4</a></li>
-		    <li><a href="examples5.html">5</a></li>
-		    <li><a href="examples6.html">6</a></li>
-		    <li><a href="examples7.html">7</a></li>
-		    <li><a href="examples8.html">8</a></li>
-		    <li><a href="examples9.html">9</a></li>
-		    <li><a href="examples10.html">10</a></li>
-		    <li><a href="examples11.html">11</a></li>
-		    <li><a href="examples12.html">12</a></li>
-		    <li><a href="examples13.html">13</a></li>
-		    <li><a href="examples14.html">14</a></li>
-		    <li><a href="examples15.html">15</a></li>
-		    <li><a href="examples4.html">»</a></li>
-		  </ul>
-		</div>
-		
+
+	  <hr />
+
 	  <h1>HTML Tables</h1>
-	  
+
 	  <p>Here are a few examples of tables, both with and without styling...</p>
-	  
+
 	  <p>Table with minimal styling:</p>
 	  <table style="width: 50%">
 	    <tr>
@@ -188,11 +169,11 @@
 	      <td>99</td>
 	    </tr>
 	  </table>
-	  
+
 	  <hr>
-	  
+
 	  <p>The following table has collapsed borders, cell padding and the headings are left-aligned:</p>
-	  
+
 	  <table id="table2" style="width:75%">
 	    <tr>
 	      <th>First Name</th>
@@ -215,11 +196,11 @@
 	      <td>99</td>
 	    </tr>
 	  </table>
-	  
+
 	  <hr>
-	  
+
 	  <p>This table has a 5px border-spacing:</p>
-	  
+
 	  <table id="table3" style="width:75%">
 	    <tr>
 	      <th>First Name</th>
@@ -242,11 +223,11 @@
 	      <td>99</td>
 	    </tr>
 	  </table>
-	  
+
 	  <hr>
-	  
+
 	  <p>The following table has a cell that spans more than one column:</p>
-	  
+
 	  <table id="table4" style="width: 50%">
 	    <tr>
 	      <th>Name</th>
@@ -258,11 +239,11 @@
 	      <td>2039845723</td>
 	    </tr>
 	  </table>
-	  
+
 	  <hr>
-	  
+
 	  <p>The following table has a cell that spans more than one row:</p>
-	  
+
 	  <table id="table5" style="width: 50%">
 	    <tr>
 	      <th>Name:</th>
@@ -276,11 +257,11 @@
 	      <td>0987098708</td>
 	    </tr>
 	  </table>
-	  
+
 	  <hr>
-	  
+
 	  <p>Here is a table with a caption:</p>
-	  
+
 	  <table id="caption" style="width: 50%">
 		  <caption>Monthly Savings</caption>
 	    <tr>
@@ -296,11 +277,11 @@
 	      <td>$75</td>
 	    </tr>
 	  </table>
-	  
+
 	  <hr>
-	  
+
 	  <p>The following table has a special style:</p>
-	  
+
 	  <table id="special" style="width: 75%">
 	  <tr>
 	    <th>Name</th>
@@ -328,21 +309,45 @@
 	    <td>Female</td>
 	  </tr>
 	  </table>
-	  
-	  <nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
-	</nav>
-	  
-	  
-	  
+
+		<hr />
+
+		<div class="centerpag">
+		  <ul class="pagination">
+			<li><a href="examples2.html">«</a></li>
+		    <li><a href="examples1.html">1</a></li>
+		    <li><a href="examples2.html">2</a></li>
+		    <li><a href="#" class="active">3</a></li>
+		    <li><a href="examples4.html">4</a></li>
+		    <li><a href="examples5.html">5</a></li>
+		    <li><a href="examples6.html">6</a></li>
+		    <li><a href="examples7.html">7</a></li>
+		    <li><a href="examples8.html">8</a></li>
+		    <li><a href="examples9.html">9</a></li>
+		    <li><a href="examples10.html">10</a></li>
+		    <li><a href="examples11.html">11</a></li>
+		    <li><a href="examples12.html">12</a></li>
+		    <li><a href="examples13.html">13</a></li>
+		    <li><a href="examples14.html">14</a></li>
+		    <li><a href="examples15.html">15</a></li>
+		    <li><a href="examples4.html">»</a></li>
+		  </ul>
+		</div>
+
+
+		<nav class="nava">
+  		<ul>
+  		<li><a href="../../../index.html">Home</a></li>
+  		<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+  		<li><a href="../../resume/resume.html">Resume</a></li>
+  		<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+  		<li><a class="active" href="../projects.html">Projects</a></li>
+  		<li style="float: right"><a href="../../about/about.html">About</a></li>
+  		</ul>
+  	</nav>
+
+
+
 	</body>
 
 </html>

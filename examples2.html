@@ -2,36 +2,37 @@
 
 <html>
 	<head>
-		
+
 	  <title>Examples 2</title>
 	  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <link type="text/css" rel="stylesheet" href="html_examples.css">
 	  <link type="text/css" rel="stylesheet" href="examples.css">
 	  <style>
-		  
+
 		header{
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-		  
+
 		/*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -40,22 +41,22 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-		  
-		  
+
+
 		  /*style examples*/
 	    div#div1 {
 			height: 30px;
@@ -64,76 +65,56 @@
 			color: white;
 			margin: 5px;
 			}
-			
+
 		div.div1 {
 			height: 30px;
 			width: 50%;
 			background-color: yellow;
 			margin: 5px;
 			}
-			
+
 		a#colored {
 			color: red;
 			}
-		
+
 		a#visited:visited {
 			color: yellow;
 			}
-		
+
 		a#hover:hover {
 			color: lime;
 			}
-		
+
 		a#active:active {
 			color:orange;
 			}
-		
+
 		a#free {
 			text-decoration: none;
 			}
-			
+
 		div#clearfix {
 			clear: both;
 			}
-			
+
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
-		
+
 		<header>
 		  <h1>Styles, Links and Images</h1>
 		</header>
-		
-		<div class="centerpag">
-		  <ul class="pagination">
-			<li><a href="examples1.html">«</a></li>
-		    <li><a href="examples1.html">1</a></li>
-		    <li><a href="#" class="active">2</a></li>
-		    <li><a href="examples3.html">3</a></li>
-		    <li><a href="examples4.html">4</a></li>
-		    <li><a href="examples5.html">5</a></li>
-		    <li><a href="examples6.html">6</a></li>
-		    <li><a href="examples7.html">7</a></li>
-		    <li><a href="examples8.html">8</a></li>
-		    <li><a href="examples9.html">9</a></li>
-		    <li><a href="examples10.html">10</a></li>
-		    <li><a href="examples11.html">11</a></li>
-		    <li><a href="examples12.html">12</a></li>
-		    <li><a href="examples13.html">13</a></li>
-		    <li><a href="examples14.html">14</a></li>
-		    <li><a href="examples15.html">15</a></li>
-		    <li><a href="examples3.html">»</a></li>
-		  </ul>
-		</div>
-	
+
+		<hr />
+
 	  <h3 id="bookmark">Top</h3> <!--create bookmark-->
-		
+
 	  <h1>HTML Styles - CSS</h1>
-	  
+
 	  <h2>Styling HTML with CSS</h2>
-	  
+
 	  <p>HTML can be styled using CSS in three ways:
 	    <ul>
 	      <li><b>Inline:</b> by using the <b>style attribute</b> in HTML elements</li>
@@ -141,137 +122,137 @@
 	      <li><b>External:</b> by using an <b>external CSS file</b></li>
 	    </ul>
 	  </p>
-	  
+
 	  <p>For the purpose of this document I will mostly be using <b>Inline</b> and <b>Internal CSS.</b></p>
-	  
+
 	  <hr>
-	  
+
 	  <h3>CSS Fonts:</h3>
-	  
+
 	  <p style="color: red;">This paragraph has a red text color.</p>
-	  
+
 	  <p style="font-family: cursive;">This paragraph has a cursive font.</p>
-	  
+
 	  <p style="font-size: 30px;">This paragraph has a 30px font size.</p>
-	  
+
 	  <hr>
-	  
+
 	  <h3>CSS Borders:</h3>
-	  
+
 	  <div style="border: 1px solid blue;">This div has a border of 1px solid blue.</div>
-	  
+
 	  <br><br>
-	  
+
 	  <div style="border: 2px ridge red;">This div has a border of 2px ridge blue.</div>
-	  
+
 	  <hr>
-	  
+
 	  <h3>CSS Padding:</h3>
-	  
+
 	  <div style="border: 1px solid green; padding: 30px;">This div has padding of 30px.</div>
-	  
+
 	  <hr>
-	  
+
 	  <h3>CSS Margin:</h3>
-	  
+
 	  <p>These two divs are separated by a margin of 10px each (20px total margin space):</p>
-	  
+
 	  <div style="background-color: red; height: 20px; width: 50%; margin: 10px;"></div>
 	  <div style="background-color: blue; height: 20px; width: 50%; margin: 10px;"></div>
-	  
+
 	  <hr>
-	  
+
 	  <h3>The id Attribute:</h3>
-	  
+
 	  <div id="div1">This div is styled with internal css using the id attribute.</div>
-	  
+
 	  <div class="div1">This div is styled with internal css using the class attribute.</div>
-	  
+
 	  <hr>
-	  
+
 	  <h1>HTML Links</h1>
-	  
+
 	  <p><b>Note:</b> a link does not have to be text...it can be an image or any other HTML element.</p>
-	  
+
 	  <h3>Text as Link:</h3>
 	  <a href="#">Text Link</a>
-	  
+
 	  <h3>An <b>absolute url</b> uses a full web address: (http://www.google.com)</h3>
 	  <a href="http://www.google.com">Google.com</a>
-	  
+
 	  <h3>A local link is specified with a <b>relative url</b>: (local_link.html)</h3>
-	  
+
 	  <a href="#">Local Link</a>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Styled Links</h3>
-	  
+
 	  <p>This link is red:</p>
 	  <a href="#" id="colored">Colored</a>
-	  
+
 	  <p>This link will turn yellow once visited:</p>
 	  <a href="#" id="visited">Visited</a>
-	  
+
 	  <p>This link will turn lime when you hover over it:</p>
 	  <a href="#" id="hover">Hover</a>
-	  
+
 	  <p>This link will turn orange when you click on it:</p>
 	  <a href="#" id="active">Active</a>
-	  
+
 	  <p>This link has the underline removed:</p>
 	  <a href="#" id="free">No Underline</a>
-	  
+
 	  <p>This link will open in a new browser window:</p>
 	  <a href="#" target="_blank">New Window</a>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Image as Link:</h3>
-	  
+
 	  <p>The following image is a link!</p>
-	  
+
 	  <a href="#"><img src="bluestar.png" height="50px" width="50px"></a>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Bookmarks</h3>
-	  
+
 	  <p>The following link will take you to the top of the page:</p>
-	  
+
 	  <a href="#bookmark">To Top</a> <!--link to bookmark-->
-	  
+
 	  <hr>
-	  
+
 	  <h1>HTML Images</h1>
-	  
+
 	  <p>Here are some pictures:</p>
-	  
+
 	  <img src="snow.jpg" alt="pretty snow" style="height: 150px; width: auto">
-	  
+
 	  <img src="snow2.jpg" alt="more pretty snow" style="height: 150px; width: auto">
-	  
+
 	  <img src="Images/pinksky.jpg" alt="pink sky" style="height: 150px; width: auto">
-	  
+
 	  <p>Here is a GIF (animated image):</p>
-	  
+
 	  <img src="puppy.gif" alt="puppy wagging tail" style="height: 100px; width: auto">
-	  
+
 	  <p>Here is an image used as a link:</p>
-	  
+
 	  <a href="#"><img src="silverstar.png" alt="a silver star link" style="height: 100px; width: 100px; border: 0;"></a>
-	  
+
 	  <p>Here is an image (orange star) floated to the right:
-	  
+
 	  <img src="orangestar.png" alt="an orange star" style="height: 100px; width: auto; float: right;">
 	  </p>
-	  
+
 	  <div id="clearfix"></div>
-	  
+
 	  <p>Here is a mapped image: click on Sun or Earth for separate image...</p>
-	  
+
 	  <img src="sunearth.jpg" alt="picture of sun and earth" width="512" height="288" border="0" usemap="#map" />
-	  
+
 
       <map name="map">
 
@@ -279,18 +260,41 @@
       <area shape="circle" coords="422,142,73" alt="picture of earth" href="earth.jpg" />
       </map>
 
-<nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
-	</nav>
-     
+			<hr />
+
+			<div class="centerpag">
+			  <ul class="pagination">
+				<li><a href="examples1.html">«</a></li>
+			    <li><a href="examples1.html">1</a></li>
+			    <li><a href="#" class="active">2</a></li>
+			    <li><a href="examples3.html">3</a></li>
+			    <li><a href="examples4.html">4</a></li>
+			    <li><a href="examples5.html">5</a></li>
+			    <li><a href="examples6.html">6</a></li>
+			    <li><a href="examples7.html">7</a></li>
+			    <li><a href="examples8.html">8</a></li>
+			    <li><a href="examples9.html">9</a></li>
+			    <li><a href="examples10.html">10</a></li>
+			    <li><a href="examples11.html">11</a></li>
+			    <li><a href="examples12.html">12</a></li>
+			    <li><a href="examples13.html">13</a></li>
+			    <li><a href="examples14.html">14</a></li>
+			    <li><a href="examples15.html">15</a></li>
+			    <li><a href="examples3.html">»</a></li>
+			  </ul>
+			</div>
+
+			<nav class="nava">
+				<ul>
+				<li><a href="../../../index.html">Home</a></li>
+				<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+				<li><a href="../../resume/resume.html">Resume</a></li>
+				<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+				<li><a class="active" href="../projects.html">Projects</a></li>
+				<li style="float: right"><a href="../../about/about.html">About</a></li>
+				</ul>
+			</nav>
+
      </body>
 
 </html>

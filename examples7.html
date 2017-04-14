@@ -7,24 +7,28 @@
 <link type="text/css" rel="stylesheet" href="examples.css">
 
 <style>
-	
+
+	.nava {
+		margin-left: 0;
+	}
+
 	header.pageheader {
 		    color: navy;
 			font-family: cursive;
 			text-align: center;
 		}
 	/*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -33,54 +37,39 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 			/*style examples*/
-	
-	
-body {font-family: "Raleway", Arial, sans-serif}
-.w3-row img{margin-bottom:-8px}
+
+
+		body {
+			font-family: "Raleway", Arial, sans-serif
+		}
+
+		.w3-row img {
+			margin-bottom:-8px
+		}
 </style>
 <body>
-	
+
 	<header class="pageheader">
 	  <h1>W3.CSS Template</h1>
 	</header>
-	
-	<div class="centerpag">
-		  <ul class="pagination">
-			<li><a href="examples6.html">«</a></li>
-		    <li><a href="examples1.html">1</a></li>
-		    <li><a href="examples2.html">2</a></li>
-		    <li><a href="examples3.html">3</a></li>
-		    <li><a href="examples4.html">4</a></li>
-		    <li><a href="examples5.html">5</a></li>
-		    <li><a href="examples6.html">6</a></li>
-		    <li><a href="#" class="active">7</a></li>
-		    <li><a href="examples8.html">8</a></li>
-		    <li><a href="examples9.html">9</a></li>
-		    <li><a href="examples10.html">10</a></li>
-		    <li><a href="examples11.html">11</a></li>
-		    <li><a href="examples12.html">12</a></li>
-		    <li><a href="examples13.html">13</a></li>
-		    <li><a href="examples14.html">14</a></li>
-		    <li><a href="examples15.html">15</a></li>
-		    <li><a href="examples8.html">»</a></li>
-		  </ul>
-		</div>
+
+	<hr />
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
@@ -106,7 +95,7 @@ body {font-family: "Raleway", Arial, sans-serif}
       <img src="pinksky.jpg" style="width:100%;">
     </div>
   </div>
-  
+
 <!-- End Page Content -->
 </div>
 
@@ -135,17 +124,40 @@ body {font-family: "Raleway", Arial, sans-serif}
   <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
+<hr />
+
+<div class="centerpag" style="margin-left: 10px;">
+		<ul class="pagination">
+		<li><a href="examples6.html"> << </a></li>
+			<li><a href="examples1.html">1</a></li>
+			<li><a href="examples2.html">2</a></li>
+			<li><a href="examples3.html">3</a></li>
+			<li><a href="examples4.html">4</a></li>
+			<li><a href="examples5.html">5</a></li>
+			<li><a href="examples6.html">6</a></li>
+			<li><a href="#" class="active">7</a></li>
+			<li><a href="examples8.html">8</a></li>
+			<li><a href="examples9.html">9</a></li>
+			<li><a href="examples10.html">10</a></li>
+			<li><a href="examples11.html">11</a></li>
+			<li><a href="examples12.html">12</a></li>
+			<li><a href="examples13.html">13</a></li>
+			<li><a href="examples14.html">14</a></li>
+			<li><a href="examples15.html">15</a></li>
+			<li><a href="examples8.html"> >> </a></li>
+		</ul>
+	</div>
+
 <nav class="nava">
 	<ul>
 	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
+	<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
 	<li><a href="../../resume/resume.html">Resume</a></li>
 	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
 	<li><a class="active" href="../projects.html">Projects</a></li>
 	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
 	</ul>
-	</nav>
- 
+</nav>
+
 </body>
 </html>

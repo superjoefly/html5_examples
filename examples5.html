@@ -2,35 +2,36 @@
 
 <html>
 	<head>
-		
+
 	  <title>Examples 5</title>
 	  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <link type="text/css" rel="stylesheet" href="examples.css">
 	  <style>
-		  
+
 		  header{
 			color: navy;
 			font-family: cursive;
 			text-align: center;
-			}  
-			
+			}
+
 		h1, h2, h3 {
 			color: navy;
 			font-family: cursive;
 			}
-			
+
 			/*pagination*/
-		
+
 		ul.pagination {
 			display: inline-block;
 			padding: 0;
 			margin: 0;
 			}
-			
+
 		ul.pagination li {
 			display: inline;
 			}
-			
+
 		ul.pagination li a{
 			color: black;
 			float: left;
@@ -39,33 +40,33 @@
 			transition: background-color .5;
 			border: 1px solid #ddd;
 			}
-			
+
 		ul.pagination li a.active {
 			background-color: #4286f4;
 			color: white;
 			border: 1px solid #4caf50;
 			}
-			
+
 		ul.pagination li a:hover:not(active) {
 			background-color: #ddd;
 			}
-			
+
 		div.centerpag {
 			text-align: center;
 			}
-			
+
 			/*style examples*/
-		  
+
 	    #test1 {
 			border: 1px solid blue;
 			padding: 5px;
 			}
-			
+
 		#test2 {
 			border: 1px solid red;
 			padding: 5px;
 			}
-			
+
 		#test3 {
 			background-color: cornflowerblue;
 			color: white;
@@ -73,14 +74,14 @@
 			width: 50%;
 			border: 1px solid black;
 			}
-			
+
 		#mexico {
 			background-color: pink;
 			border: 1px solid red;
 			color: blue;
 			padding: 5px;
 			}
-			
+
 		.test4 {
 			height: 30px;
 			width: 50%;
@@ -90,7 +91,7 @@
 			margin: 10px;
 			border: 1px solid black;
 			}
-			
+
 		.mexico2 {
 			background-color: yellow;
 			color: blue;
@@ -98,152 +99,132 @@
 			padding: 5px;
 			}
 	  </style>
-	  
+
 	</head>
-	
+
 	<body>
 		<header>
-	  <h1>HTML Block and Inline Elements</h1>
-	    </header>
-	    
-	    <div class="centerpag">
-		  <ul class="pagination">
-			<li><a href="examples4.html">«</a></li>
-		    <li><a href="examples1.html">1</a></li>
-		    <li><a href="examples2.html">2</a></li>
-		    <li><a href="examples3.html">3</a></li>
-		    <li><a href="examples4.html">4</a></li>
-		    <li><a href="#" class="active">5</a></li>
-		    <li><a href="examples6.html">6</a></li>
-		    <li><a href="examples7.html">7</a></li>
-		    <li><a href="examples8.html">8</a></li>
-		    <li><a href="examples9.html">9</a></li>
-		    <li><a href="examples10.html">10</a></li>
-		    <li><a href="examples11.html">11</a></li>
-		    <li><a href="examples12.html">12</a></li>
-		    <li><a href="examples13.html">13</a></li>
-		    <li><a href="examples14.html">14</a></li>
-		    <li><a href="examples15.html">15</a></li>
-		    <li><a href="examples6.html">»</a></li>
-		  </ul>
-		</div>
-	  
+	  	<h1>HTML Block and Inline Elements</h1>
+	  </header>
+
+	    <hr />
+
 	  <h3>Block Level Elements</h3>
-	  
+
 	  <p>Here is an example of a <b>block-level element</b>:</p>
-	  
+
 	  <div id="test1">
 	  Block Level Element: starts on new line and takes up full width available.
 	  </div>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Inline Level Elements</h3>
-	  
+
 	  <p>Here is an example of an <b>inline element</b>:</p>
-	  
+
 	  <p>Inline Element: <span id="test2">doesn't start on a new line</span> and only takes up as much width as is necessary.</p>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Div Element</h3>
-	  
+
 	  <p>Example of a <b>styled div-element</b>:</p>
-	  
+
 	  <div id="test3">
 	    <h4>Mexico City</h4>
 	    <p>Mexico City is the capital and most populous city of Mexico.</p>
 	  </div>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Span Element</h3>
-	  
+
 	  <p>Example of a <b>styled span-element</b>:</p>
-	  
+
 	  <p>Mexico City is the <span id="mexico">capital and most populous city</span> of Mexico.</p>
-	  
+
 	  <hr>
-	  
+
 	  <h3>Class Attribute</h3>
-	  
+
 	  <p>The following 3 divs are styled using the same <b>class name</b>:</p>
-	  
+
 	  <div class="test4">Styled using class-attribute</div>
 	  <div class="test4">Styled using class-attribute</div>
 	  <div class="test4">Styled using class-attribute</div>
-	  
+
 	  <hr>
-	  
+
 	  <p>The following paragraph uses the <b>class-attribute for an inline element</b>:</p>
-	  
+
 	  <p>Mexico is the <span class="mexico2">capital and most populous city</span> of Mexico.</p>
-	  
+
 	  <hr>
-	  
+
 	  <h1>HTML Iframes</h1>
-	  
+
 	  <p>Here is an example of an <b>iframe with a grey border and a link that opens in the iframe</b>:</p>
-	  
+
 	  <iframe src="sample_iframe.html" style="border: 2px solid grey;" height="200px" width="300px" name="iframe_a"></iframe>
-	  
+
 	  <p><a href="https://www.bing.com" style="text-decoration: none;" target="iframe_a">Bing.com</a></p>
-	  
+
 	  <hr>
-	  
+
 	  <h1>HTML JavaScript</h1>
-	  
+
 	  <h3>Examples of JavaScript</h3>
-	  
+
 	  <p><b>Display Date and Time</b>:</p>
 	  <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time</button>
-	  
+
 	  <p id="demo"></p>
-	  
+
 	  <hr>
-	  
+
 	  <p><b>Write "Hello JavaScript!"</b> into an HTML element with <b>id="demo"</b>:</p>
-	  
+
 	  <p id="demo1"></p>
-	  
+
 	  <script>
 	    document.getElementById('demo1').innerHTML = "Hello JavaScript!";
 	  </script>
-	  
+
 	  <hr>
-	  
+
 	  <p><b>Change Content of HTML Element</b>:</p>
-	  
+
 	  <button type="button" onclick ="myFunction()">Click Me!</button>
-	  
+
 	  <p id="demo2">Demonstration</p>
-	  
+
 	  <script>
 	    function myFunction() {
 			document.getElementById('demo2').innerHTML = "Hello JavaScript!";
 			}
 	  </script>
-	  
+
 	  <hr>
-	  
+
 	  <p><b>Change Style of HTML Element</b>:</p>
-	  
+
 	  <p id="demo3">Change the style of an HTML element.</p>
-	  
+
 	  <script>
 	    function myFunction2() {
 			document.getElementById('demo3').style.fontSize = "25px";
-			
+
 			document.getElementById('demo3').style.color = "red";
 			}
 	  </script>
-	  
+
 	  <button type="button" onclick="myFunction2()">Click Me!</button>
-	  
+
 	  <hr>
-	  
+
 	  <p><b>Change an HTML Attribute</b>:</p>
-	  
+
 	  <script>
 	    function light(sw) {
 			var pic;
@@ -255,29 +236,52 @@
 			document.getElementById('myImage').src = pic;
 			}
 	  </script>
-	  
+
 	  <noscript>Sorry, your browser does not support JavaScript!</noscript>
-	  
+
 	  <img id="myImage" src="lboff.png" width="auto" height="auto">
-	  
+
 	  <p>
 	  <button type="button" onclick="light(1)">Light On</button>
 	  <button type="button" onclick="light(0)">Light Off</button>
 	  </p>
 
-<nav class="nava">
-	<ul>
-	<li><a href="../../../index.html">Home</a></li>
-	<li><a href="../../photography/photography.html">Photography</a></li>
-	<li><a href="../../resume/resume.html">Resume</a></li>
-	<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
-	<li><a class="active" href="../projects.html">Projects</a></li>
-	<li style="float: right"><a href="../../about/about.html">About</a></li>
-	</a></li>
-	</ul>
-	</nav>
-	  
-	  
+		<hr />
+
+		<div class="centerpag">
+		<ul class="pagination">
+			<li><a href="examples4.html">«</a></li>
+			<li><a href="examples1.html">1</a></li>
+			<li><a href="examples2.html">2</a></li>
+			<li><a href="examples3.html">3</a></li>
+			<li><a href="examples4.html">4</a></li>
+			<li><a href="#" class="active">5</a></li>
+			<li><a href="examples6.html">6</a></li>
+			<li><a href="examples7.html">7</a></li>
+			<li><a href="examples8.html">8</a></li>
+			<li><a href="examples9.html">9</a></li>
+			<li><a href="examples10.html">10</a></li>
+			<li><a href="examples11.html">11</a></li>
+			<li><a href="examples12.html">12</a></li>
+			<li><a href="examples13.html">13</a></li>
+			<li><a href="examples14.html">14</a></li>
+			<li><a href="examples15.html">15</a></li>
+			<li><a href="examples6.html">»</a></li>
+		</ul>
+	</div>
+
+		<nav class="nava">
+			<ul>
+			<li><a href="../../../index.html">Home</a></li>
+			<!-- <li><a href="../../photography/photography.html">Photography</a></li> -->
+			<li><a href="../../resume/resume.html">Resume</a></li>
+			<li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+			<li><a class="active" href="../projects.html">Projects</a></li>
+			<li style="float: right"><a href="../../about/about.html">About</a></li>
+			</ul>
+		</nav>
+
+
 	</body>
 
 </html>
